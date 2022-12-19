@@ -5,6 +5,7 @@
 body {
   align-items: center;
   background-color: #aaa;
+  color: #eee;
   display: flex;
   font-family: Courier, sans-serif;
   height: 100vh;
@@ -12,8 +13,14 @@ body {
   width: 100vw;
 }
 
+button {
+  background-color: #ffa500;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: 8px;
+}
+
 h1 {
-  color: #eee;
   font-size: 32px;
   margin-top: 10px;
 }
@@ -28,6 +35,16 @@ h1 {
   padding: 16px;
   width: 100%;
   height: 100%;
+}
+
+.controls {
+  font-size: 24px;
+}
+
+.controls > input {
+  background-color: #eee;
+  font-size: 24px;
+  padding: 4px;
 }
 
 .grid-cell {

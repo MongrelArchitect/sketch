@@ -22,5 +22,21 @@ function drawCell() {
   });
 }
 
+// Allow user to choose grid dimensions
+function changeSize(newSize) {
+  const applyButton = document.querySelector('#apply-grid-size');
+  const newGridSize = document.querySelector('#grid-width');
+  applyButton.addEventListener('click', () => {
+    // Remove current grid & create new one with supplied dimensions
+    const sketchPad = document.querySelector('#sketch-pad'); 
+    while (sketchPad.firstChild) {
+      sketchPad.removeChild(sketchPad.firstChild);
+    }
+    fillGrid(parseInt(newGridSize.value));
+    drawCell();
+  });
+}
+
 fillGrid(16);
 drawCell();
+changeSize();
