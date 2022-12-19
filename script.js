@@ -1,10 +1,11 @@
-// Draw a 16 x 16 grid of <div>s
-function fillGrid() {
-  const gridWidth = 16;
+// Create grid of <div>s
+function fillGrid(gridWidth) {
+  const newWidth = (1 / gridWidth) * 100;
   const sketchPad = document.querySelector('#sketch-pad'); 
   for (let i = 0; i < gridWidth ** 2; i += 1) {
     const newDiv = document.createElement('div');
     newDiv.classList.add('grid-cell');
+    newDiv.setAttribute('style', `width:${newWidth}%;`);
     sketchPad.appendChild(newDiv);
   }
 }
@@ -21,6 +22,5 @@ function drawCell() {
   });
 }
 
-fillGrid();
-
+fillGrid(16);
 drawCell();
