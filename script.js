@@ -23,7 +23,7 @@ function drawCell() {
 }
 
 // Allow user to choose grid dimensions
-function changeSize(newSize) {
+function changeSize() {
   const applyButton = document.querySelector('#apply-grid-size');
   const userSelection = document.querySelector('#grid-width');
   applyButton.addEventListener('click', () => {
