@@ -23,9 +23,13 @@ body {
 }
 
 .grid-cell {
-  width: 6.25%;
+  background-color: #eee;
   height: auto;
-  border: 2px solid red;
+  width: 6.25%;
+}
+
+.grid-filled {
+  background-color: #111;
 }
 
 .sketch-pad {

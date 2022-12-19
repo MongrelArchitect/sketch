@@ -9,4 +9,18 @@ function fillGrid() {
   }
 }
 
+// Fill grid cells with color on mouseover
+function drawCell() {
+  const gridCells = document.querySelectorAll('.grid-cell');
+  gridCells.forEach((cell) => {
+    cell.addEventListener('mouseover', () => {
+      if (!cell.classList.contains('grid-filled')) {
+        cell.classList.add('grid-filled');
+      }
+    });
+  });
+}
+
 fillGrid();
+
+drawCell();
